@@ -25,8 +25,8 @@ SECRET_KEY = 'x8#m5f83cynhhb)##+gloevve$4%!&29s0!**8s&ze&%%e8-nc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hspython.herokuapp.com',]
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['hspython.herokuapp.com',]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registration',
+    'travelsite',
 ]
 
 MIDDLEWARE = [
@@ -120,4 +121,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [ 
+    os.path.join(BASE_DIR, 'static')
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
